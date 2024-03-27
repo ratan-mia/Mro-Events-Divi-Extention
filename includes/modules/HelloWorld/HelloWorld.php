@@ -8,7 +8,7 @@ class MRO_HelloWorld extends ET_Builder_Module {
 	protected $module_credits = array(
 		'module_uri' => 'https://shorifullislamratan.me/projects/mro-events',
 		'author'     => 'Ratan Mia',
-		'author_uri' => 'https://shorifullislamratan.me/projects/mro-events',
+		'author_uri' => 'https://shorifullislamratan.me',
 	);
 
 	public function init() {

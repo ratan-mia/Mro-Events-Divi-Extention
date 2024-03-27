@@ -5,7 +5,7 @@ Plugin URI:  https://shorifullislamratan.me/projects/mro-events
 Description: A simple Divi Extention to show custom events posts
 Version:     1.0.0
 Author:      Ratan Mia
-Author URI:  https://shorifullislamratan.me/projects/mro-events
+Author URI:  https://shorifullislamratan.me
 License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: mro-mro-events-divi-extention
