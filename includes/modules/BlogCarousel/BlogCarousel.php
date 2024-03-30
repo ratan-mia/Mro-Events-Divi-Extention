@@ -274,11 +274,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		$fields = array();
 
         $fields['post_type'] = array(
-            'label'            => esc_html__( 'Post Type', 'et_builder' ),
+            'label'            => esc_html__( 'Post Type', 'mro-mro-events-divi-extention' ),
             'type'             => 'select',
 //            'option_category'  => 'configuration',
             'options'          => et_get_registered_post_type_options( false, false ),
-            'description'      => esc_html__( 'Choose posts of which post type you would like to display.', 'et_builder' ),
+            'description'      => esc_html__( 'Choose posts of which post type you would like to display.', 'mro-mro-events-divi-extention' ),
             'computed_affects' => array(
                 '__posts',
             ),
