@@ -32,6 +32,17 @@ if ( ! function_exists( 'mro_initialize_extension' ) ):
  *
  * @since 1.0.0
  */
+
+// add javascript and css
+function mro_events_divi_extention_scripts() {
+    wp_enqueue_style( 'mro-events-divi-extention-style', plugin_dir_url( __FILE__ ) . '/styles/swiper.css', array(), '1.0.0', 'all' );
+    wp_enqueue_script( 'mro-events-swiper', plugin_dir_url( __FILE__ ) . '/scripts/swiper-bundle.min.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_style( 'mro-event-carousel', plugin_dir_url( __FILE__ ) . '/includes/modules/BlogCarousel/style.css', array(), '1.0.0', 'all' );
+    wp_enqueue_script( 'mro-event-carousel', plugin_dir_url( __FILE__ ) . '/includes/modules/BlogCarousel/frontend.min.js', array( 'mro-events-swiper' ), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'mro_events_divi_extention_scripts' );
+
+
 function mro_initialize_extension() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/MroEventsDiviExtention.php';
 }
