@@ -297,6 +297,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
             'type'            => 'text',
             'option_category' => 'basic_option',
             'description'     => esc_html__( 'Enter the meta key.', 'mro-mro-events-divi-extention' ),
+            'allow_dynamic_content'=> true,
         );
 
 
@@ -1573,6 +1574,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 
 		$defaults = array(
             'post_type'               => 'post',
+            'meta_key'                => '',
 			'posts_number'            => '',
 			'posts_offset'            => '',
 			'post_orderby'            => '',
