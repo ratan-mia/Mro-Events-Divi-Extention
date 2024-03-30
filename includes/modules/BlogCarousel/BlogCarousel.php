@@ -1617,7 +1617,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'perm'           => 'readable',
 //			'post_type'      => 'post',
 //			'orderby'        => $args['post_orderby'],
-            'meta_key'       => isset($args['meta_key']) ? $args['meta_key'] : '', // Use the meta key from the 'meta_key' field
+            'meta_key'       => isset($args['meta_key']) ? $args['meta_key'] : 'Event_Date', // Use the meta key from the 'meta_key' field
             'orderby'        => 'meta_value',
 			'order'          => $args['post_sortby'],
 			'offset'         => intval( $args['posts_offset'] ),
