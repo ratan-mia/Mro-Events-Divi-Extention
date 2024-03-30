@@ -295,7 +295,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
         $fields['meta_key'] = array(
             'label'           => esc_html__( 'Meta Key', 'mro-mro-events-divi-extention' ),
             'type'            => 'text',
-            'option_category' => 'basic_option',
+//            'option_category' => 'basic_option',
             'description'     => esc_html__( 'Enter the meta key.', 'mro-mro-events-divi-extention' ),
             'allow_dynamic_content'=> true,
         );
@@ -304,7 +304,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
         $fields['compare'] = array(
             'label'           => esc_html__( 'Comparison Type', 'mro-mro-events-divi-extention' ),
             'type'            => 'select',
-            'option_category' => 'basic_option',
+//            'option_category' => 'basic_option',
             'options'         => array(
                 '='  => 'Equal',
                 '!=' => 'Not Equal',
@@ -1529,6 +1529,8 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'computed_callback'   => array( 'DSM_BlogCarousel', 'get_blogposts_html' ),
 			'computed_depends_on' => array(
                     'post_type',
+                    'meta_key',
+
 				'posts_number',
 				'posts_offset',
 				'include_categories',
@@ -1566,6 +1568,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 
 	public static function get_blogposts_html( $args = array(), $conditional_tags = array(), $current_page = array() ) {
 
+        date_default_timezone_set(get_option('timezone_string'));
 		global $paged, $post, $wp_query;
 
 		if ( self::$rendering ) {
@@ -1602,6 +1605,10 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'readmore_use_icon'       => '',
 		);
 
+        echo "<pre>";
+//        print_r($args);
+        echo "</pre>";
+
 		$args = wp_parse_args( $args, $defaults );
 
 		$is_front_page = et_fb_conditional_tag( 'is_front_page', $conditional_tags );
@@ -1616,20 +1623,24 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'post_status'    => array( 'publish', 'private', 'inherit' ),
 			'perm'           => 'readable',
 //			'post_type'      => 'post',
-//			'orderby'        => $args['post_orderby'],
-            'meta_key'       => isset($args['meta_key']) ? $args['meta_key'] : 'Event_Date', // Use the meta key from the 'meta_key' field
-            'orderby'        => 'meta_value',
+			'orderby'        => $args['post_orderby'],
+//            'meta_key'       => isset($args['meta_key']) ? $args['meta_key'] : 'Event_Date', // Use the meta key from the 'meta_key' field
+//            'orderby'        => 'meta_value',
 			'order'          => $args['post_sortby'],
-			'offset'         => intval( $args['posts_offset'] ),
-            'meta_query'     => array(
-                array(
-                    'key'     => isset($args['meta_key']) ? $args['meta_key'] : 'Event_Date',
-                    'value'   =>  date('Y-m-d'),
-                    'compare' => isset( $args['compare']) ?  $args['compare'] : '>=', // Use the comparison operator from the 'compare' field
-                    'type'    => 'DATE', // Type of the custom field (date)
-                ),
-            ),
+			'offset'         => intval( $args['posts_offset'] )
+//            'meta_query'     => array(
+//                array(
+//                    'key'     => isset($args['meta_key']) ? $args['meta_key'] : 'Event_Date',
+//                    'value'   =>  date('Y-m-d'),
+//                    'compare' => isset( $args['compare']) ?  $args['compare'] : '>=', // Use the comparison operator from the 'compare' field
+//                    'type'    => 'DATE', // Type of the custom field (date)
+//                ),
+//            ),
 		);
+
+        var_dump($args['meta_key']);
+        var_dump($args['post_type']);
+
 
 		$query_args['cat'] = implode( ',', self::filter_include_categories( $args['include_categories'], $post_id ) );
 
