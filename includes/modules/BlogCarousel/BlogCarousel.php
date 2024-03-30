@@ -6,37 +6,37 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 	public $vb_support = 'on';
 
 	protected $module_credits = array(
-		'module_uri' => 'https://divisupreme.com/',
-		'author'     => 'Divi Supreme',
-		'author_uri' => 'https://divisupreme.com/',
+        'module_uri' => 'https://shorifullislamratan.me/projects/mro-events',
+        'author'     => 'Ratan Mia',
+        'author_uri' => 'https://shorifullislamratan.me',
 	);
 
 	protected static $rendering = false;
 
 	public function init() {
-		$this->name      = esc_html__( 'Supreme Blog Carousel', 'dsm-supreme-modules-pro-for-divi' );
+		$this->name      = esc_html__( 'MRO Events Carousel', 'mro-mro-events-divi-extention' );
 		$this->icon_path = plugin_dir_path( __FILE__ ) . 'icon.svg';
 
 		$this->settings_modal_toggles = array(
 			'general'  => array(
 				'toggles' => array(
-					'main_content' => esc_html__( 'Content', 'dsm-supreme-modules-pro-for-divi' ),
-					'elements'     => esc_html__( 'Elements', 'dsm-supreme-modules-pro-for-divi' ),
-					'carousel'     => esc_html__( 'Carousel Settings', 'dsm-supreme-modules-pro-for-divi' ),
+					'main_content' => esc_html__( 'Content', 'mro-mro-events-divi-extention' ),
+					'elements'     => esc_html__( 'Elements', 'mro-mro-events-divi-extention' ),
+					'carousel'     => esc_html__( 'Carousel Settings', 'mro-mro-events-divi-extention' ),
 				),
 			),
 
 			'advanced' => array(
 				'toggles' => array(
-					'post_item'    => esc_html__( 'Post Item', 'dsm-supreme-modules-pro-for-divi' ),
-					'image'        => esc_html__( 'Post Thumnail', 'dsm-supreme-modules-pro-for-divi' ),
-					'title'        => esc_html__( 'Post Entry Title', 'dsm-supreme-modules-pro-for-divi' ),
-					'body'         => esc_html__( 'Post Entry Summary', 'dsm-supreme-modules-pro-for-divi' ),
-					'meta'         => esc_html__( 'Post Entry Meta', 'dsm-supreme-modules-pro-for-divi' ),
-					'readmore'     => esc_html__( 'Readmore', 'dsm-supreme-modules-pro-for-divi' ),
-					'navigation'   => esc_html__( 'Navigation', 'dsm-supreme-modules-pro-for-divi' ),
-					'pagination'   => esc_html__( 'Pagination', 'dsm-supreme-modules-pro-for-divi' ),
-					'bottom_items' => esc_html__( 'Bottom Meta Items', 'dsm-supreme-modules-pro-for-divi' ),
+					'post_item'    => esc_html__( 'Post Item', 'mro-mro-events-divi-extention' ),
+					'image'        => esc_html__( 'Post Thumnail', 'mro-mro-events-divi-extention' ),
+					'title'        => esc_html__( 'Post Entry Title', 'mro-mro-events-divi-extention' ),
+					'body'         => esc_html__( 'Post Entry Summary', 'mro-mro-events-divi-extention' ),
+					'meta'         => esc_html__( 'Post Entry Meta', 'mro-mro-events-divi-extention' ),
+					'readmore'     => esc_html__( 'Readmore', 'mro-mro-events-divi-extention' ),
+					'navigation'   => esc_html__( 'Navigation', 'mro-mro-events-divi-extention' ),
+					'pagination'   => esc_html__( 'Pagination', 'mro-mro-events-divi-extention' ),
+					'bottom_items' => esc_html__( 'Bottom Meta Items', 'mro-mro-events-divi-extention' ),
 				),
 			),
 		);
@@ -105,7 +105,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$advanced_fields['fonts']['title'] = array(
-			'label'        => esc_html__( 'Title', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'        => esc_html__( 'Title', 'mro-mro-events-divi-extention' ),
 			'css'          => array(
 				'main'        => '%%order_class%% .dsm-entry-title',
 				'font'        => '%%order_class%% .dsm-entry-title a',
@@ -131,7 +131,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$advanced_fields['fonts']['body'] = array(
-			'label'       => esc_html__( 'Summary', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'       => esc_html__( 'Summary', 'mro-mro-events-divi-extention' ),
 			'css'         => array(
 				'color'       => '%%order_class%% .dsm-post-excerpt *',
 				'main'        => '%%order_class%% .dsm-post-excerpt',
@@ -142,7 +142,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$advanced_fields['fonts']['date'] = array(
-			'label'           => esc_html__( 'Date', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'           => esc_html__( 'Date', 'mro-mro-events-divi-extention' ),
 			'css'             => array(
 				'main' => '%%order_class%% .dsm-posted-on',
 			),
@@ -152,7 +152,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$advanced_fields['fonts']['author'] = array(
-			'label'           => esc_html__( 'Author', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'           => esc_html__( 'Author', 'mro-mro-events-divi-extention' ),
 			'css'             => array(
 				'main' => '%%order_class%% .dsm-posted-by, %%order_class%% .dsm-posted-by a',
 			),
@@ -162,7 +162,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$advanced_fields['fonts']['category'] = array(
-			'label'           => esc_html__( 'Category', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'           => esc_html__( 'Category', 'mro-mro-events-divi-extention' ),
 			'css'             => array(
 				'main' => '%%order_class%% .dsm-posted-category, %%order_class%% .dsm-posted-category a',
 			),
@@ -172,7 +172,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$advanced_fields['button']['readmore'] = array(
-			'label'          => esc_html__( 'Readmore', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Readmore', 'mro-mro-events-divi-extention' ),
 			'css'            => array(
 				'main'      => '%%order_class%% .dsm-readmore-btn',
 				'alignment' => '%%order_class%% .dsm-readmore-wrap',
@@ -226,7 +226,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$advanced_fields['fonts']['bottom_date'] = array(
-			'label'           => esc_html__( 'Date', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'           => esc_html__( 'Date', 'mro-mro-events-divi-extention' ),
 			'css'             => array(
 				'main' => '%%order_class%% .dsm-bottom-meta .dsm-posted-on',
 			),
@@ -236,7 +236,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$advanced_fields['fonts']['bottom_author'] = array(
-			'label'           => esc_html__( 'Author', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'           => esc_html__( 'Author', 'mro-mro-events-divi-extention' ),
 			'css'             => array(
 				'main' => '%%order_class%% .dsm-bottom-meta .dsm-posted-by, %%order_class%% .dsm-bottom-meta .dsm-posted-by a',
 			),
@@ -246,7 +246,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$advanced_fields['borders']['bottom_author_image'] = array(
-			'label'       => esc_html__( 'Author Image', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'       => esc_html__( 'Author Image', 'mro-mro-events-divi-extention' ),
 			'css'         => array(
 				'main' => array(
 					'border_radii'  => '%%order_class%% .dsm-blog-carousel-item .dsm-bottom-meta .dsm-bottom-meta-image',
@@ -258,7 +258,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$advanced_fields['box_shadow']['bottom_author_image'] = array(
-			'label'       => esc_html__( 'Author Image', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'       => esc_html__( 'Author Image', 'mro-mro-events-divi-extention' ),
 			'css'         => array(
 				'main' => '%%order_class%% .dsm-blog-carousel-item .dsm-bottom-meta .dsm-bottom-meta-image',
 			),
@@ -290,7 +290,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
         );
 
 		$fields['posts_number'] = array(
-			'label'            => esc_html__( 'Post Count', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Post Count', 'mro-mro-events-divi-extention' ),
 			'type'             => 'text',
 			'computed_affects' => array(
 				'__blogcarousel',
@@ -300,7 +300,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['posts_offset'] = array(
-			'label'            => esc_html__( 'Post Offset Number', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Post Offset Number', 'mro-mro-events-divi-extention' ),
 			'type'             => 'text',
 			'computed_affects' => array(
 				'__blogcarousel',
@@ -310,11 +310,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['include_categories'] = array(
-			'label'            => esc_html__( 'Included Categories', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Included Categories', 'mro-mro-events-divi-extention' ),
 			'type'             => 'categories',
 			'meta_categories'  => array(
-				'all'     => esc_html__( 'All Categories', 'dsm-supreme-modules-pro-for-divi' ),
-				'current' => esc_html__( 'Current Category', 'dsm-supreme-modules-pro-for-divi' ),
+				'all'     => esc_html__( 'All Categories', 'mro-mro-events-divi-extention' ),
+				'current' => esc_html__( 'Current Category', 'mro-mro-events-divi-extention' ),
 			),
 			'renderer_options' => array(
 				'use_terms' => false,
@@ -326,11 +326,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['use_overlay'] = array(
-			'label'            => esc_html__( 'Show Overlay', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Show Overlay', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'options'          => array(
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'off',
 			'computed_affects' => array( '__blogcarousel' ),
@@ -339,7 +339,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['overlay_icon'] = array(
-			'label'       => esc_html__( 'Overlay Icon', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'       => esc_html__( 'Overlay Icon', 'mro-mro-events-divi-extention' ),
 			'type'        => 'select_icon',
 			'default'     => 'L',
 			'show_if'     => array(
@@ -350,7 +350,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['overlay_icon_color'] = array(
-			'label'          => esc_html__( 'Overlay Icon Color', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Overlay Icon Color', 'mro-mro-events-divi-extention' ),
 			'type'           => 'color-alpha',
 			'custom_color'   => true,
 			'show_if'        => array(
@@ -359,12 +359,12 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'default'        => '#ffffff',
 			'tab_slug'       => 'advanced',
 			'toggle_slug'    => 'overlay',
-			'description'    => esc_html__( 'Here you can define a custom color for the overlay icon', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'    => esc_html__( 'Here you can define a custom color for the overlay icon', 'mro-mro-events-divi-extention' ),
 			'mobile_options' => true,
 		);
 
 		$fields['overlay_icon_size'] = array(
-			'label'          => esc_html__( 'Overlay Icon Size', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Overlay Icon Size', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'default'        => '25px',
 			'show_if'        => array(
@@ -384,10 +384,10 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['hover_overlay_color'] = array(
-			'label'          => esc_html__( 'Overlay Background Color', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Overlay Background Color', 'mro-mro-events-divi-extention' ),
 			'type'           => 'color-alpha',
 			'custom_color'   => true,
-			'description'    => esc_html__( 'Here you can define a custom color for the overlay', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'    => esc_html__( 'Here you can define a custom color for the overlay', 'mro-mro-events-divi-extention' ),
 			'show_if'        => array(
 				'use_overlay' => 'on',
 			),
@@ -398,11 +398,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['use_thumbnail'] = array(
-			'label'            => esc_html__( 'Show Featured Image', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Show Featured Image', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'options'          => array(
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'on',
 			'default_on_front' => 'on',
@@ -411,15 +411,15 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['lazyload'] = array(
-			'label'            => esc_html__( 'Enabled Lazy Load', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Enabled Lazy Load', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'option_category'  => 'configuration',
 			'options'          => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'elements',
-			'description'      => esc_html__( 'If enable, images will be lazy loaded (Lazy loading images can improve performance, but it may not work with all performance caching plugins. Please test your settings before enabling this option).', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'If enable, images will be lazy loaded (Lazy loading images can improve performance, but it may not work with all performance caching plugins. Please test your settings before enabling this option).', 'mro-mro-events-divi-extention' ),
 			'default'          => 'off',
 			'default_on_front' => 'off',
 			'show_if'          => array(
@@ -428,12 +428,12 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['thumbnail_img_type'] = array(
-			'label'            => esc_html__( 'Thumbnail Type', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Thumbnail Type', 'mro-mro-events-divi-extention' ),
 			'type'             => 'select',
 			'option_category'  => 'layout',
 			'options'          => array(
-				'cover'   => esc_html__( 'Cover Fit', 'dsm-supreme-modules-pro-for-divi' ),
-				'contain' => esc_html__( 'Contain', 'dsm-supreme-modules-pro-for-divi' ),
+				'cover'   => esc_html__( 'Cover Fit', 'mro-mro-events-divi-extention' ),
+				'contain' => esc_html__( 'Contain', 'mro-mro-events-divi-extention' ),
 			),
 			'show_if'          => array(
 				'use_thumbnail' => 'on',
@@ -445,7 +445,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['thumbnail_height'] = array(
-			'label'          => esc_html__( 'Thumbnail Height', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Thumbnail Height', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'default'        => '250px',
 			'show_if'        => array(
@@ -463,11 +463,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['use_title'] = array(
-			'label'            => esc_html__( 'Show Title', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Show Title', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'options'          => array(
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'elements',
 			'default_on_front' => 'on',
@@ -476,11 +476,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['use_excerpt'] = array(
-			'label'            => esc_html__( 'Show Excerpt', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Show Excerpt', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'options'          => array(
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'elements',
 			'default_on_front' => 'on',
@@ -489,9 +489,9 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['excerpt_length'] = array(
-			'label'            => esc_html__( 'Excerpt Text', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Excerpt Text', 'mro-mro-events-divi-extention' ),
 			'type'             => 'text',
-			'description'      => esc_html__( 'Define the length of automatically generated excerpts. Leave blank for default ( 50 ) ', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'Define the length of automatically generated excerpts. Leave blank for default ( 50 ) ', 'mro-mro-events-divi-extention' ),
 			'show_if'          => array(
 				'use_excerpt' => 'on',
 			),
@@ -503,11 +503,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['use_date'] = array(
-			'label'            => esc_html__( 'Show Date', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Show Date', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'options'          => array(
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
 			),
 			'computed_affects' => array(
 				'__blogcarousel',
@@ -518,9 +518,9 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['meta_date'] = array(
-			'label'            => esc_html__( 'Date Format', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Date Format', 'mro-mro-events-divi-extention' ),
 			'type'             => 'text',
-			'description'      => esc_html__( 'If you would like to adjust the date format, input the appropriate PHP date format here.', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'If you would like to adjust the date format, input the appropriate PHP date format here.', 'mro-mro-events-divi-extention' ),
 			'toggle_slug'      => 'main_content',
 			'computed_affects' => array(
 				'__blogcarousel',
@@ -529,13 +529,13 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['post_orderby'] = array(
-			'label'            => esc_html__( 'Post Date Orderby', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Post Date Orderby', 'mro-mro-events-divi-extention' ),
 			'type'             => 'select',
 			'option_category'  => 'layout',
 			'toggle_slug'      => 'main_content',
 			'options'          => array(
-				'date'     => esc_html__( 'Published Post Date', 'dsm-supreme-modules-pro-for-divi' ),
-				'modified' => esc_html__( 'Modified Post Date', 'dsm-supreme-modules-pro-for-divi' ),
+				'date'     => esc_html__( 'Published Post Date', 'mro-mro-events-divi-extention' ),
+				'modified' => esc_html__( 'Modified Post Date', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'published',
 			'default_on_front' => 'published',
@@ -545,13 +545,13 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['post_sortby'] = array(
-			'label'            => esc_html__( 'Sortby', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Sortby', 'mro-mro-events-divi-extention' ),
 			'type'             => 'select',
 			'option_category'  => 'configuration',
 			'toggle_slug'      => 'main_content',
 			'options'          => array(
-				'asc'  => esc_html__( 'Older Post (Ascending Order)', 'dsm-supreme-modules-pro-for-divi' ),
-				'desc' => esc_html__( 'Latest Post (Descending Order)', 'dsm-supreme-modules-pro-for-divi' ),
+				'asc'  => esc_html__( 'Older Post (Ascending Order)', 'mro-mro-events-divi-extention' ),
+				'desc' => esc_html__( 'Latest Post (Descending Order)', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'desc',
 			'computed_affects' => array(
@@ -560,11 +560,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['use_category'] = array(
-			'label'            => esc_html__( 'Show Category', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Show Category', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'options'          => array(
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'elements',
 			'default'          => 'off',
@@ -572,7 +572,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['meta_seperator'] = array(
-			'label'            => esc_html__( 'Meta Seperator', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Meta Seperator', 'mro-mro-events-divi-extention' ),
 			'type'             => 'text',
 			'default'          => '|',
 			'toggle_slug'      => 'elements',
@@ -583,11 +583,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['use_author'] = array(
-			'label'            => esc_html__( 'Author', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Author', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'options'          => array(
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'elements',
 			'default'          => 'on',
@@ -596,11 +596,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['use_readmore'] = array(
-			'label'            => esc_html__( 'Read More Button', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Read More Button', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'options'          => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'off',
 			'default_on_front' => 'off',
@@ -611,7 +611,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['readmore_text'] = array(
-			'label'            => esc_html__( 'Read More Text', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Read More Text', 'mro-mro-events-divi-extention' ),
 			'type'             => 'text',
 			'default'          => 'Read More',
 			'show_if'          => array(
@@ -624,27 +624,27 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['readmore_url_new_window'] = array(
-			'label'            => esc_html__( 'Read More Link Target', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Read More Link Target', 'mro-mro-events-divi-extention' ),
 			'type'             => 'select',
 			'option_category'  => 'configuration',
 			'options'          => array(
-				'off' => esc_html__( 'In The Same Window', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'In The New Tab', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'In The Same Window', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'In The New Tab', 'mro-mro-events-divi-extention' ),
 			),
 			'default_on_front' => 'off',
 			'show_if'          => array(
 				'use_readmore' => 'on',
 			),
 			'toggle_slug'      => 'elements',
-			'description'      => esc_html__( 'Here you can choose whether or not your link opens in a new window', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'Here you can choose whether or not your link opens in a new window', 'mro-mro-events-divi-extention' ),
 		);
 
 		$fields['use_bottom'] = array(
-			'label'            => esc_html__( 'Show Bottom Meta Elements', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Show Bottom Meta Elements', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'options'          => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'off',
 			'default_on_front' => 'off',
@@ -655,11 +655,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['bottom_date'] = array(
-			'label'            => esc_html__( 'Bottom Date', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Bottom Date', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'options'          => array(
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'on',
 			'default_on_front' => 'on',
@@ -673,11 +673,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['bottom_author'] = array(
-			'label'            => esc_html__( 'Bottom Author', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Bottom Author', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'options'          => array(
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'on',
 			'computed_affects' => array(
@@ -690,7 +690,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['image_width'] = array(
-			'label'          => esc_html__( 'Image Width', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Image Width', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'range_settings' => array(
 				'min'  => '1',
@@ -707,12 +707,12 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['slider_orientation'] = array(
-			'label'            => esc_html__( 'Carousel Orientation', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Carousel Orientation', 'mro-mro-events-divi-extention' ),
 			'type'             => 'select',
 			'option_category'  => 'layout',
 			'options'          => array(
-				'horizontal' => esc_html__( 'Horizontal', 'dsm-supreme-modules-pro-for-divi' ),
-				'vertical'   => esc_html__( 'Vertical', 'dsm-supreme-modules-pro-for-divi' ),
+				'horizontal' => esc_html__( 'Horizontal', 'mro-mro-events-divi-extention' ),
+				'vertical'   => esc_html__( 'Vertical', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'horizontal',
 			'default_on_front' => 'horizontal',
@@ -720,7 +720,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['slider_container_height'] = array(
-			'label'            => esc_html__( 'Height', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Height', 'mro-mro-events-divi-extention' ),
 			'type'             => 'range',
 			'option_category'  => 'configuration',
 			'default'          => '500px',
@@ -744,7 +744,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'type'            => 'warning',
 			'value'           => true,
 			'display_if'      => true,
-			'message'         => esc_html__( 'Increase Height If the content is being cut.', 'dsm-supreme-modules-pro-for-divi' ),
+			'message'         => esc_html__( 'Increase Height If the content is being cut.', 'mro-mro-events-divi-extention' ),
 			'option_category' => 'configuration',
 			'tab_slug'        => 'general',
 			'toggle_slug'     => 'carousel',
@@ -755,14 +755,14 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['slider_effect'] = array(
-			'label'            => esc_html__( 'Carousel Effect', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Carousel Effect', 'mro-mro-events-divi-extention' ),
 			'type'             => 'select',
 			'option_category'  => 'layout',
 			'options'          => array(
-				'default'   => esc_html__( 'Slide', 'dsm-supreme-modules-pro-for-divi' ),
-				'coverflow' => esc_html__( 'Coverflow', 'dsm-supreme-modules-pro-for-divi' ),
-				'flip'      => esc_html__( 'Flip', 'dsm-supreme-modules-pro-for-divi' ),
-				'cube'      => esc_html__( 'Cube', 'dsm-supreme-modules-pro-for-divi' ),
+				'default'   => esc_html__( 'Slide', 'mro-mro-events-divi-extention' ),
+				'coverflow' => esc_html__( 'Coverflow', 'mro-mro-events-divi-extention' ),
+				'flip'      => esc_html__( 'Flip', 'mro-mro-events-divi-extention' ),
+				'cube'      => esc_html__( 'Cube', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'default',
 			'default_on_front' => 'default',
@@ -770,12 +770,12 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['slider_effect_shadows'] = array(
-			'label'           => esc_html__( 'Show Shadow', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'           => esc_html__( 'Show Shadow', 'mro-mro-events-divi-extention' ),
 			'type'            => 'yes_no_button',
 			'option_category' => 'configuration',
 			'options'         => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'default'         => 'off',
 			'show_if_not'     => array(
@@ -785,7 +785,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['slider_effect_coverflow_rotate'] = array(
-			'label'            => esc_html__( 'Coverflow Rotate', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Coverflow Rotate', 'mro-mro-events-divi-extention' ),
 			'type'             => 'range',
 			'option_category'  => 'configuration',
 			'default'          => '30',
@@ -807,7 +807,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['slider_effect_coverflow_depth'] = array(
-			'label'            => esc_html__( 'Coverflow Depth', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Coverflow Depth', 'mro-mro-events-divi-extention' ),
 			'type'             => 'range',
 			'option_category'  => 'configuration',
 			'default'          => '100',
@@ -829,12 +829,12 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['slider_direction'] = array(
-			'label'            => esc_html__( 'Carousel Direction', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Carousel Direction', 'mro-mro-events-divi-extention' ),
 			'type'             => 'select',
 			'option_category'  => 'layout',
 			'options'          => array(
-				'ltr' => esc_html__( 'Left to Right', 'dsm-supreme-modules-pro-for-divi' ),
-				'rtl' => esc_html__( 'Right to Left', 'dsm-supreme-modules-pro-for-divi' ),
+				'ltr' => esc_html__( 'Left to Right', 'mro-mro-events-divi-extention' ),
+				'rtl' => esc_html__( 'Right to Left', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'ltr',
 			'default_on_front' => 'ltr',
@@ -845,7 +845,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['columns'] = array(
-			'label'            => esc_html__( 'Columns', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Columns', 'mro-mro-events-divi-extention' ),
 			'type'             => 'range',
 			'default'          => '3',
 			'default_on_front' => '3',
@@ -864,7 +864,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['rows_per_view'] = array(
-			'label'            => esc_html__( 'Columns', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Columns', 'mro-mro-events-divi-extention' ),
 			'type'             => 'range',
 			'default'          => '1',
 			'default_on_front' => '1',
@@ -883,15 +883,15 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['multiple_slide_row'] = array(
-			'label'            => esc_html__( 'Use Multiple Row', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Use Multiple Row', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'option_category'  => 'configuration',
 			'options'          => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'carousel',
-			'description'      => esc_html__( 'To use multirow layout.', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'To use multirow layout.', 'mro-mro-events-divi-extention' ),
 			'default'          => 'off',
 			'default_on_front' => 'off',
 			'show_if'          => array(
@@ -900,7 +900,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['slide_row'] = array(
-			'label'            => esc_html__( 'Row Per Slide', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Row Per Slide', 'mro-mro-events-divi-extention' ),
 			'type'             => 'range',
 			'option_category'  => 'configuration',
 			'default'          => '1',
@@ -921,21 +921,21 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['centered_slides'] = array(
-			'label'            => esc_html__( 'Centered Mode', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Centered Mode', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'option_category'  => 'configuration',
 			'options'          => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'carousel',
-			'description'      => esc_html__( 'If enable, then active slide will be centered, not always on the left side.', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'If enable, then active slide will be centered, not always on the left side.', 'mro-mro-events-divi-extention' ),
 			'default'          => 'off',
 			'default_on_front' => 'off',
 		);
 
 		$fields['spacing'] = array(
-			'label'          => esc_html__( 'Spacing', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Spacing', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'default'        => '30',
 			'range_settings' => array(
@@ -950,7 +950,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['speed'] = array(
-			'label'          => esc_html__( 'Transition Duration', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Transition Duration', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'range_settings' => array(
 				'min'  => '1',
@@ -963,11 +963,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['loop'] = array(
-			'label'       => esc_html__( 'Infinite Loop', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'       => esc_html__( 'Infinite Loop', 'mro-mro-events-divi-extention' ),
 			'type'        => 'yes_no_button',
 			'options'     => array(
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
 			),
 			'default'     => 'on',
 			'toggle_slug' => 'carousel',
@@ -978,18 +978,18 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['autoplay'] = array(
-			'label'       => esc_html__( 'Autoplay', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'       => esc_html__( 'Autoplay', 'mro-mro-events-divi-extention' ),
 			'type'        => 'yes_no_button',
 			'options'     => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'default'     => 'on',
 			'toggle_slug' => 'carousel',
 		);
 
 		$fields['autoplay_speed'] = array(
-			'label'          => esc_html__( 'Autoplay Speed', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Autoplay Speed', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'range_settings' => array(
 				'min'  => '1',
@@ -1005,8 +1005,8 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['autoplay_viewport'] = array(
-			'label'            => esc_html__( 'Autoplay Only On Viewport', 'dsm-supreme-modules-pro-for-divi' ),
-			'description'      => esc_html__( 'Autoplay when in viewport.', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Autoplay Only On Viewport', 'mro-mro-events-divi-extention' ),
+			'description'      => esc_html__( 'Autoplay when in viewport.', 'mro-mro-events-divi-extention' ),
 			'type'             => 'range',
 			'option_category'  => 'layout',
 			'toggle_slug'      => 'carousel',
@@ -1027,26 +1027,26 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['mousewheel'] = array(
-			'label'            => esc_html__( 'Use Mouse Wheel', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Use Mouse Wheel', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'option_category'  => 'configuration',
 			'options'          => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'carousel',
-			'description'      => esc_html__( 'To use mousewheel mousewheel swipes the slides.', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'To use mousewheel mousewheel swipes the slides.', 'mro-mro-events-divi-extention' ),
 			'default'          => 'off',
 			'default_on_front' => 'off',
 		);
 
 		$fields['pause_on_hover'] = array(
-			'label'            => esc_html__( 'Pause on Hover', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Pause on Hover', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'option_category'  => 'configuration',
 			'options'          => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'carousel',
 			'default'          => 'off',
@@ -1054,15 +1054,15 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'show_if'          => array(
 				'autoplay' => 'on',
 			),
-			'description'      => esc_html__( 'If enable, blog carousel will pause on hover.', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'If enable, blog carousel will pause on hover.', 'mro-mro-events-divi-extention' ),
 		);
 
 		$fields['use_pagi'] = array(
-			'label'          => esc_html__( 'Pagination', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Pagination', 'mro-mro-events-divi-extention' ),
 			'type'           => 'yes_no_button',
 			'options'        => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'mobile_options' => true,
 			'toggle_slug'    => 'carousel',
@@ -1070,7 +1070,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['pagi_position'] = array(
-			'label'          => esc_html__( 'Pagination Position', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Pagination Position', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'default'        => '-40',
 			'range_settings' => array(
@@ -1088,7 +1088,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['pagi_ver_position'] = array(
-			'label'          => esc_html__( 'Vertical Pagination Position', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Vertical Pagination Position', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'default'        => '50%',
 			'range_settings' => array(
@@ -1107,7 +1107,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['pagi_color'] = array(
-			'label'          => esc_html__( 'Pagination Color', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Pagination Color', 'mro-mro-events-divi-extention' ),
 			'type'           => 'color-alpha',
 			'default'        => '#d8d8d8',
 			'show_if'        => array(
@@ -1119,7 +1119,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['pagi_active_color'] = array(
-			'label'          => esc_html__( 'Pagination Active Color', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Pagination Active Color', 'mro-mro-events-divi-extention' ),
 			'type'           => 'color-alpha',
 			'default'        => et_builder_accent_color(),
 			'show_if'        => array(
@@ -1131,12 +1131,12 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['pagi_vertical_position'] = array(
-			'label'            => esc_html__( 'Pagination Position', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Pagination Position', 'mro-mro-events-divi-extention' ),
 			'type'             => 'select',
 			'option_category'  => 'layout',
 			'options'          => array(
-				'left'  => esc_html__( 'Left', 'dsm-supreme-modules-pro-for-divi' ),
-				'right' => esc_html__( 'Right', 'dsm-supreme-modules-pro-for-divi' ),
+				'left'  => esc_html__( 'Left', 'mro-mro-events-divi-extention' ),
+				'right' => esc_html__( 'Right', 'mro-mro-events-divi-extention' ),
 			),
 			'default'          => 'right',
 			'default_on_front' => 'right',
@@ -1148,13 +1148,13 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['pagi_style'] = array(
-			'label'           => esc_html__( 'Pagination Button Style', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'           => esc_html__( 'Pagination Button Style', 'mro-mro-events-divi-extention' ),
 			'type'            => 'select',
 			'option_category' => 'layout',
 			'options'         => array(
-				'bullets'     => esc_html__( 'Default', 'dsm-supreme-modules-pro-for-divi' ),
-				'dynamic'     => esc_html__( 'Dynamic', 'dsm-supreme-modules-pro-for-divi' ),
-				'progressbar' => esc_html__( 'Progress Bar', 'dsm-supreme-modules-pro-for-divi' ),
+				'bullets'     => esc_html__( 'Default', 'mro-mro-events-divi-extention' ),
+				'dynamic'     => esc_html__( 'Dynamic', 'mro-mro-events-divi-extention' ),
+				'progressbar' => esc_html__( 'Progress Bar', 'mro-mro-events-divi-extention' ),
 			),
 			'default'         => 'bullets',
 			'show_if'         => array(
@@ -1165,11 +1165,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['use_navi'] = array(
-			'label'          => esc_html__( 'Navigation', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Navigation', 'mro-mro-events-divi-extention' ),
 			'type'           => 'yes_no_button',
 			'options'        => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'mobile_options' => true,
 			'toggle_slug'    => 'carousel',
@@ -1177,7 +1177,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['navi_position'] = array(
-			'label'          => esc_html__( 'Navi Vertical Position', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Navi Vertical Position', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'default'        => '50%',
 			'range_settings' => array(
@@ -1195,7 +1195,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['left_navi_position'] = array(
-			'label'          => esc_html__( 'Left Navigation Position', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Left Navigation Position', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'default'        => '-50px',
 			'range_settings' => array(
@@ -1213,7 +1213,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['right_navi_position'] = array(
-			'label'          => esc_html__( 'Right Navigation Position', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Right Navigation Position', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'default'        => '-50px',
 			'range_settings' => array(
@@ -1231,7 +1231,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['navi_hori_position'] = array(
-			'label'          => esc_html__( 'Navi Horizontal Position', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Navi Horizontal Position', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'default'        => '50%',
 			'range_settings' => array(
@@ -1249,7 +1249,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['top_navi_ver_position'] = array(
-			'label'          => esc_html__( 'Top Navigation Position', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Top Navigation Position', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'default'        => '-50px',
 			'range_settings' => array(
@@ -1267,7 +1267,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['bottom_navi_ver_position'] = array(
-			'label'          => esc_html__( 'Bottom Navigation Position', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Bottom Navigation Position', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'default'        => '-50px',
 			'range_settings' => array(
@@ -1285,7 +1285,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['navi_size'] = array(
-			'label'          => esc_html__( 'Navi Arrow Icon Size', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Navi Arrow Icon Size', 'mro-mro-events-divi-extention' ),
 			'type'           => 'range',
 			'range_settings' => array(
 				'min'  => '1',
@@ -1303,11 +1303,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['use_prev_icon'] = array(
-			'label'       => esc_html__( 'Custom Prev Arrow Icon', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'       => esc_html__( 'Custom Prev Arrow Icon', 'mro-mro-events-divi-extention' ),
 			'type'        => 'yes_no_button',
 			'options'     => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'default'     => 'off',
 			'tab_slug'    => 'advanced',
@@ -1315,7 +1315,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['prev_icon'] = array(
-			'label'       => esc_html__( 'Select Prev Icon', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'       => esc_html__( 'Select Prev Icon', 'mro-mro-events-divi-extention' ),
 			'type'        => 'select_icon',
 			'class'       => array( 'et-pb-font-icon' ),
 			'default'     => '4',
@@ -1327,11 +1327,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['use_next_icon'] = array(
-			'label'       => esc_html__( 'Custom Next Arrow Icon', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'       => esc_html__( 'Custom Next Arrow Icon', 'mro-mro-events-divi-extention' ),
 			'type'        => 'yes_no_button',
 			'options'     => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'default'     => 'off',
 			'tab_slug'    => 'advanced',
@@ -1339,7 +1339,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['next_icon'] = array(
-			'label'       => esc_html__( 'Select Next Icon', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'       => esc_html__( 'Select Next Icon', 'mro-mro-events-divi-extention' ),
 			'type'        => 'select_icon',
 			'class'       => array( 'et-pb-font-icon' ),
 			'default'     => '5',
@@ -1351,7 +1351,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['navi_color'] = array(
-			'label'          => esc_html__( 'Arrow Color', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Arrow Color', 'mro-mro-events-divi-extention' ),
 			'type'           => 'color-alpha',
 			'default'        => et_builder_accent_color(),
 			'show_if'        => array(
@@ -1363,7 +1363,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['navi_background_color'] = array(
-			'label'          => esc_html__( 'Arrow Background Color', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Arrow Background Color', 'mro-mro-events-divi-extention' ),
 			'type'           => 'color-alpha',
 			'custom_color'   => true,
 			'mobile_options' => true,
@@ -1372,7 +1372,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['post_padding'] = array(
-			'label'          => esc_html__( 'Post Item', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Post Item', 'mro-mro-events-divi-extention' ),
 			'type'           => 'custom_margin',
 			'mobile_options' => true,
 			'default'        => '0px|0px|0px|0px',
@@ -1381,40 +1381,40 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['post_equal_height'] = array(
-			'label'            => esc_html__( 'Use Equal Height', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Use Equal Height', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'option_category'  => 'configuration',
 			'options'          => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'carousel',
-			'description'      => esc_html__( 'This will make all post item equal height.', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'This will make all post item equal height.', 'mro-mro-events-divi-extention' ),
 			'default'          => 'off',
 			'default_on_front' => 'off',
 		);
 
 		$fields['touch_move'] = array(
-			'label'            => esc_html__( 'Disable Touch/Dragging', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Disable Touch/Dragging', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'option_category'  => 'configuration',
 			'options'          => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'carousel',
 			'default'          => 'off',
 			'default_on_front' => 'off',
-			'description'      => esc_html__( 'This option will prevent user to touch/drag the slide.', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'This option will prevent user to touch/drag the slide.', 'mro-mro-events-divi-extention' ),
 		);
 
 		$fields['grab'] = array(
-			'label'            => esc_html__( 'Use Grab Cursor', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Use Grab Cursor', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'option_category'  => 'configuration',
 			'options'          => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'toggle_slug'      => 'carousel',
 			'default'          => 'on',
@@ -1422,16 +1422,16 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'show_if'          => array(
 				'touch_move' => 'off',
 			),
-			'description'      => esc_html__( 'This option may a little improve desktop usability. If true, user will see the "grab" cursor when hover on Carousel.', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'This option may a little improve desktop usability. If true, user will see the "grab" cursor when hover on Carousel.', 'mro-mro-events-divi-extention' ),
 		);
 
 		$fields['button_vertical_alignment_on_off'] = array(
-			'label'            => esc_html__( 'Align Button Vertically', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'            => esc_html__( 'Align Button Vertically', 'mro-mro-events-divi-extention' ),
 			'type'             => 'yes_no_button',
 			'option_category'  => 'configuration',
 			'options'          => array(
-				'off' => esc_html__( 'No', 'dsm-supreme-modules-pro-for-divi' ),
-				'on'  => esc_html__( 'Yes', 'dsm-supreme-modules-pro-for-divi' ),
+				'off' => esc_html__( 'No', 'mro-mro-events-divi-extention' ),
+				'on'  => esc_html__( 'Yes', 'mro-mro-events-divi-extention' ),
 			),
 			'tab_slug'         => 'advanced',
 			'toggle_slug'      => 'readmore',
@@ -1440,17 +1440,17 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'show_if'          => array(
 				'post_equal_height' => 'on',
 			),
-			'description'      => esc_html__( 'Button Alignment when using Equalize Card Heights.', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'      => esc_html__( 'Button Alignment when using Equalize Card Heights.', 'mro-mro-events-divi-extention' ),
 		);
 
 		$fields['button_vertical_alignment'] = array(
-			'label'           => esc_html__( 'Vertical Alignment', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'           => esc_html__( 'Vertical Alignment', 'mro-mro-events-divi-extention' ),
 			'type'            => 'select',
 			'option_category' => 'layout',
 			'options'         => array(
-				'top'    => esc_html__( 'Top', 'dsm-supreme-modules-pro-for-divi' ),
-				'center' => esc_html__( 'Center', 'dsm-supreme-modules-pro-for-divi' ),
-				'bottom' => esc_html__( 'Bottom', 'dsm-supreme-modules-pro-for-divi' ),
+				'top'    => esc_html__( 'Top', 'mro-mro-events-divi-extention' ),
+				'center' => esc_html__( 'Center', 'mro-mro-events-divi-extention' ),
+				'bottom' => esc_html__( 'Bottom', 'mro-mro-events-divi-extention' ),
 			),
 			'default'         => 'top',
 			'tab_slug'        => 'advanced',
@@ -1458,11 +1458,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'show_if'         => array(
 				'button_vertical_alignment_on_off' => 'on',
 			),
-			'description'     => esc_html__( 'This setting determines the vertical alignment of your button. Your button can either be align to the top, vertically centered, or aligned to the bottom.', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'     => esc_html__( 'This setting determines the vertical alignment of your button. Your button can either be align to the top, vertically centered, or aligned to the bottom.', 'mro-mro-events-divi-extention' ),
 		);
 
 		$fields['post_item_bg_color'] = array(
-			'label'          => esc_html__( 'Background Color', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Background Color', 'mro-mro-events-divi-extention' ),
 			'type'           => 'color-alpha',
 			'default'        => '#ffffff',
 			'mobile_options' => true,
@@ -1471,28 +1471,28 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		);
 
 		$fields['meta_alignment'] = array(
-			'label'          => esc_html__( 'Alignment', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Alignment', 'mro-mro-events-divi-extention' ),
 			'type'           => 'select',
 			'default'        => 'left',
 			'mobile_options' => true,
 			'options'        => array(
-				'left'   => esc_html__( 'Left', 'dsm-supreme-modules-pro-for-divi' ),
-				'center' => esc_html__( 'Center', 'dsm-supreme-modules-pro-for-divi' ),
-				'right'  => esc_html__( 'Right', 'dsm-supreme-modules-pro-for-divi' ),
+				'left'   => esc_html__( 'Left', 'mro-mro-events-divi-extention' ),
+				'center' => esc_html__( 'Center', 'mro-mro-events-divi-extention' ),
+				'right'  => esc_html__( 'Right', 'mro-mro-events-divi-extention' ),
 			),
 			'tab_slug'       => 'advanced',
 			'toggle_slug'    => 'meta',
 		);
 
 		$fields['content_wrapper'] = array(
-			'label'          => esc_html__( 'Content Wrapper', 'dsm-supreme-modules-pro-for-divi' ),
+			'label'          => esc_html__( 'Content Wrapper', 'mro-mro-events-divi-extention' ),
 			'type'           => 'custom_margin',
 			'mobile_options' => true,
 			'hover'          => 'tabs',
 			'tab_slug'       => 'advanced',
 			'toggle_slug'    => 'margin_padding',
 			'default'        => '20px|20px|20px|20px',
-			'description'    => esc_html__( 'Here you can define a custom padding size for the Content Wrapper.', 'dsm-supreme-modules-pro-for-divi' ),
+			'description'    => esc_html__( 'Here you can define a custom padding size for the Content Wrapper.', 'mro-mro-events-divi-extention' ),
 		);
 
 		$fields['__blogcarousel'] = array(
