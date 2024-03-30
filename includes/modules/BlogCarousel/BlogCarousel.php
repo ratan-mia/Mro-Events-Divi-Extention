@@ -14,6 +14,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 
 	protected static $rendering = false;
 
+
 	public function init() {
 		$this->name      = esc_html__( 'MRO Events Carousel', 'mro-mro-events-divi-extention' );
 		$this->icon_path = plugin_dir_path( __FILE__ ) . 'icon.svg';
@@ -1645,7 +1646,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
                 ),
            ),
 		);
-        
+
 
 		$query_args['cat'] = implode( ',', self::filter_include_categories( $args['include_categories'], $post_id ) );
 
@@ -1687,7 +1688,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		// $wp_query->et_pb_blog_query = true;
 		$query->et_pb_blog_query = true;
 
-		self::$rendering = true;
+		self::$rendering = false;
 		ob_start();
 
 		if ( $query->have_posts() ) :
