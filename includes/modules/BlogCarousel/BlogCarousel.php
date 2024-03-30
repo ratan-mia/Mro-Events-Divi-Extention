@@ -296,25 +296,33 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
             'label'           => esc_html__( 'Meta Key', 'mro-mro-events-divi-extention' ),
             'type'            => 'text',
 //            'option_category' => 'basic_option',
+            'toggle_slug'     => 'main_content',
+            'computed_affects'=> array(
+                '__posts',
+            ),
+//            'show_if'         => array(
+//                'use_current_loop' => 'off',
+//            ),
+            'default'         => 'Event_Date',
             'description'     => esc_html__( 'Enter the meta key.', 'mro-mro-events-divi-extention' ),
             'allow_dynamic_content'=> true,
         );
 
 
-        $fields['compare'] = array(
-            'label'           => esc_html__( 'Comparison Type', 'mro-mro-events-divi-extention' ),
-            'type'            => 'select',
-//            'option_category' => 'basic_option',
-            'options'         => array(
-                '='  => 'Equal',
-                '!=' => 'Not Equal',
-                '>'  => 'Greater Than',
-                '>=' => 'Greater Than or Equal To',
-                '<'  => 'Less Than',
-                '<=' => 'Less Than or Equal To',
-            ),
-            'description'     => esc_html__( 'Choose the comparison type.', 'mro-mro-events-divi-extention' ),
-        );
+//        $fields['compare'] = array(
+//            'label'           => esc_html__( 'Comparison Type', 'mro-mro-events-divi-extention' ),
+//            'type'            => 'select',
+//           'option_category' => 'basic_option',
+//            'options'         => array(
+//                '='  => 'Equal',
+//                '!=' => 'Not Equal',
+//                '>'  => 'Greater Than',
+//                '>=' => 'Greater Than or Equal To',
+//                '<'  => 'Less Than',
+//                '<=' => 'Less Than or Equal To',
+//            ),
+//            'description'     => esc_html__( 'Choose the comparison type.', 'mro-mro-events-divi-extention' ),
+//        );
 
 
 
@@ -1623,24 +1631,21 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'post_status'    => array( 'publish', 'private', 'inherit' ),
 			'perm'           => 'readable',
 //			'post_type'      => 'post',
-			'orderby'        => $args['post_orderby'],
-//            'meta_key'       => isset($args['meta_key']) ? $args['meta_key'] : 'Event_Date', // Use the meta key from the 'meta_key' field
-//            'orderby'        => 'meta_value',
+//			'orderby'        => $args['post_orderby'],
+           'meta_key'       => $args['meta_key'], // Use the meta key from the 'meta_key' field
+           'orderby'        => 'meta_value',
 			'order'          => $args['post_sortby'],
-			'offset'         => intval( $args['posts_offset'] )
-//            'meta_query'     => array(
-//                array(
-//                    'key'     => isset($args['meta_key']) ? $args['meta_key'] : 'Event_Date',
-//                    'value'   =>  date('Y-m-d'),
-//                    'compare' => isset( $args['compare']) ?  $args['compare'] : '>=', // Use the comparison operator from the 'compare' field
-//                    'type'    => 'DATE', // Type of the custom field (date)
-//                ),
-//            ),
+			'offset'         => intval( $args['posts_offset'] ),
+           'meta_query'     => array(
+               array(
+                   'key'     => $args['meta_key'],
+                   'value'   =>  date('Y-m-d'),
+                   'compare' => '>=', // Use the comparison operator from the 'compare' field
+                    'type'    => 'DATE', // Type of the custom field (date)
+                ),
+           ),
 		);
-
-        var_dump($args['meta_key']);
-        var_dump($args['post_type']);
-
+        
 
 		$query_args['cat'] = implode( ',', self::filter_include_categories( $args['include_categories'], $post_id ) );
 
@@ -1669,6 +1674,8 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		}
 
 		$query = new WP_Query( $query_args );
+
+//        var_dump($query->request) ;
 
 		$wp_query_page = $wp_query;
 
