@@ -273,6 +273,22 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 
 		$fields = array();
 
+        $fields['post_type'] = array(
+            'label'            => esc_html__( 'Post Type', 'et_builder' ),
+            'type'             => 'select',
+//            'option_category'  => 'configuration',
+            'options'          => et_get_registered_post_type_options( false, false ),
+            'description'      => esc_html__( 'Choose posts of which post type you would like to display.', 'et_builder' ),
+            'computed_affects' => array(
+                '__posts',
+            ),
+            'toggle_slug'      => 'main_content',
+            'default'          => 'post',
+//            'show_if'          => array(
+//                'use_current_loop' => 'off',
+//            ),
+        );
+
 		$fields['posts_number'] = array(
 			'label'            => esc_html__( 'Post Count', 'dsm-supreme-modules-pro-for-divi' ),
 			'type'             => 'text',
@@ -1483,6 +1499,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 			'type'                => 'computed',
 			'computed_callback'   => array( 'DSM_BlogCarousel', 'get_blogposts_html' ),
 			'computed_depends_on' => array(
+                    'post_type',
 				'posts_number',
 				'posts_offset',
 				'include_categories',
@@ -1527,6 +1544,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		}
 
 		$defaults = array(
+            'post_type'               => 'post',
 			'posts_number'            => '',
 			'posts_offset'            => '',
 			'post_orderby'            => '',
@@ -1561,10 +1579,11 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		$post_id       = isset( $current_page['id'] ) ? (int) $current_page['id'] : 0;
 
 		$query_args = array(
+                'post_type'      => $args['post_type'],
 			'posts_per_page' => intval( $args['posts_number'] ),
 			'post_status'    => array( 'publish', 'private', 'inherit' ),
 			'perm'           => 'readable',
-			'post_type'      => 'post',
+//			'post_type'      => 'post',
 			'orderby'        => $args['post_orderby'],
 			'order'          => $args['post_sortby'],
 			'offset'         => intval( $args['posts_offset'] ),
