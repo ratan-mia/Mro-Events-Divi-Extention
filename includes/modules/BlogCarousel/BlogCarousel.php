@@ -5,6 +5,7 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 	public $slug       = 'dsm_blog_carousel';
 	public $vb_support = 'on';
 
+
 	protected $module_credits = array(
         'module_uri' => 'https://shorifullislamratan.me/projects/mro-events',
         'author'     => 'Ratan Mia',
@@ -288,6 +289,33 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 //                'use_current_loop' => 'off',
 //            ),
         );
+
+
+
+        $fields['meta_key'] = array(
+            'label'           => esc_html__( 'Meta Key', 'mro-mro-events-divi-extention' ),
+            'type'            => 'text',
+            'option_category' => 'basic_option',
+            'description'     => esc_html__( 'Enter the meta key.', 'mro-mro-events-divi-extention' ),
+        );
+
+
+        $fields['compare'] = array(
+            'label'           => esc_html__( 'Comparison Type', 'mro-mro-events-divi-extention' ),
+            'type'            => 'select',
+            'option_category' => 'basic_option',
+            'options'         => array(
+                '='  => 'Equal',
+                '!=' => 'Not Equal',
+                '>'  => 'Greater Than',
+                '>=' => 'Greater Than or Equal To',
+                '<'  => 'Less Than',
+                '<=' => 'Less Than or Equal To',
+            ),
+            'description'     => esc_html__( 'Choose the comparison type.', 'mro-mro-events-divi-extention' ),
+        );
+
+
 
 		$fields['posts_number'] = array(
 			'label'            => esc_html__( 'Post Count', 'mro-mro-events-divi-extention' ),
@@ -1578,15 +1606,27 @@ class DSM_BlogCarousel extends ET_Builder_Module_Type_PostBased {
 		$is_single     = et_fb_conditional_tag( 'is_single', $conditional_tags );
 		$post_id       = isset( $current_page['id'] ) ? (int) $current_page['id'] : 0;
 
+
+
 		$query_args = array(
                 'post_type'      => $args['post_type'],
 			'posts_per_page' => intval( $args['posts_number'] ),
 			'post_status'    => array( 'publish', 'private', 'inherit' ),
 			'perm'           => 'readable',
 //			'post_type'      => 'post',
-			'orderby'        => $args['post_orderby'],
+//			'orderby'        => $args['post_orderby'],
+            'meta_key'       => isset($args['meta_key']) ? $args['meta_key'] : '', // Use the meta key from the 'meta_key' field
+            'orderby'        => 'meta_value',
 			'order'          => $args['post_sortby'],
 			'offset'         => intval( $args['posts_offset'] ),
+            'meta_query'     => array(
+                array(
+                    'key'     => isset($args['meta_key']) ? $args['meta_key'] : 'Event_Date',
+                    'value'   =>  date('Y-m-d'),
+                    'compare' => isset( $args['compare']) ?  $args['compare'] : '>=', // Use the comparison operator from the 'compare' field
+                    'type'    => 'DATE', // Type of the custom field (date)
+                ),
+            ),
 		);
 
 		$query_args['cat'] = implode( ',', self::filter_include_categories( $args['include_categories'], $post_id ) );
